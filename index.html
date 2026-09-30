@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>致稳中学 · 校园门户</title>
+<meta name="description" content="致稳中学，1996年建校。校训：超越□□□□。">
+<!-- 2027届学号段：20270701 - 20270745。其中有一个，系统里查不到。 -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%231e6fb8'/><rect x='2' y='2' width='8' height='12' fill='%23eef1f5'/></svg>">
+<link rel="stylesheet" href="/css/style.css">
+<noscript>
+  <div style="background:#000;color:#888;font-family:serif;padding:60px;text-align:center;">
+    <p>本页面需要 JavaScript 才能运行。</p>
+    <p style="margin-top:20px;font-size:13px;">就像有些事情，需要有人愿意看见，才会发生。</p>
+  </div>
+</noscript>
+</head>
+<body>
+
+<div id="startScreen" style="display:none;" aria-hidden="false">
+  <div class="start-inner">
+    <div class="start-logo">观 澜</div>
+    <div class="start-sub">致稳中学 · 校园门户</div>
+    <div class="start-warn">
+      <div class="start-warn-title">内容提示</div>
+      <p>本作含心理压迫、校园规训、中式恐怖元素。</p>
+      <p>全部为虚构创作，不涉及任何真实学校、真实人物、真实事件。</p>
+      <p>游玩中如感不适，可随时关闭页面。</p>
+    </div>
+    <div class="start-bg">
+      <div class="start-bg-title">背景</div>
+      <p>2027 年秋。你拿到一台二手笔记本。</p>
+      <p>前主人是高三（7）班的一名女生。三天前，她"转学"了。</p>
+      <p>但教务系统里，她的学号显示为：该生不存在。</p>
+    </div>
+    <div class="start-btns">
+      <button id="startEnter" class="start-btn">进 入</button>
+      <button id="startLeave" class="start-btn start-btn-leave">离 开</button>
+    </div>
+    <div class="start-foot">雄帮游戏 出品</div>
+  </div>
+</div>
+
+<div id="portalRoot">
+  <header>
+    <div class="bar">
+      <div class="brand">致 稳 中 学</div>
+      <nav>
+        <a href="#/">首页</a>
+        <a href="#/about">概况</a>
+        <a href="#/news">校务</a>
+        <a href="#/exam">成绩</a>
+        <a href="#/schedule">作息</a>
+        <a href="#/archive">校史</a>
+        <span class="more">更多 ▾
+          <span class="more-menu">
+            <a href="#/teachers">师资队伍</a>
+            <a href="#/campus">校园风光</a>
+            <a href="#/campus/map">校园地图</a>
+            <a href="#/admission">招生简章</a>
+            <a href="#/clubs">学生社团</a>
+            <a href="#/calendar">校历</a>
+            <a href="#/contact">联系我们</a>
+            <a href="#/rules">考核细则</a>
+          </span>
+        </span>
+        <a href="#/login" id="navStudent">学生登录</a>
+      </nav>
+    </div>
+    <div class="safety" id="safetyBar"></div>
+  </header>
+
+  <div class="wrap" id="app"></div>
+
+  <footer>
+    <div>
+      <a href="#/404">关于本站</a> | <a href="#/404">联系网管</a> | <a href="#/404">网站地图</a>
+    </div>
+    <div style="margin-top:6px;color:#aaa;">本站由致稳中学信息中心维护 · 建议使用 Chrome 浏览器访问 · 最后更新：2027-09-26 03:17</div>
+    <div style="margin-top:4px;">致稳中学 · 校产处 · 本站内容均为<span class="fictional">虚构</span> · 站规见 /robots.txt <span id="footX" onclick="footTap()" style="margin-left:14px;cursor:pointer;color:#bbb;">×</span></div>
+    <div style="margin-top:4px;color:#bbb;font-size:11px;">出品：雄帮游戏</div>
+  </footer>
+</div>
+<script>
+function footTap(){
+  const el=document.getElementById("footX"); if(!el) return;
+  footTap.n=(footTap.n||0)+1;
+  el.textContent = el.textContent==="×" ? "✓" : "×";
+  if(footTap.n>=3) el.textContent="别再点了。";
+}
+</script>
+
+<!-- /jing 井页（z=200） -->
+<div id="jingPage" aria-hidden="true">
+  <div id="jingSpot"></div>
+  <div id="jingBox">
+    <p style="margin-bottom:18px;">井里的先生在等人。<br>说一个名字。</p>
+    <input id="jingInput" autocomplete="off" spellcheck="false" aria-label="说一个名字">
+    <div id="jingMsg" style="margin-top:14px;font-size:13px;min-height:20px;"></div>
+  </div>
+</div>
+
+<!-- 笔记本模式（z=100） -->
+<div id="laptopScreen" aria-hidden="true">
+  <div id="bootScreen"></div>
+  <div id="desktop"></div>
+</div>
+
+<script src="/js/config.js"></script>
+<script src="/js/credits.js"></script>
+<script src="/js/effects.js"></script>
+<script src="/js/portal.js"></script>
+<script src="/js/laptop.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

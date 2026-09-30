@@ -1,0 +1,12 @@
+《观澜》第二步 · 答案原值 → 哈希对照表（仅存档，勿随游戏分发）
+
+key      原值            SHA-256(hex)                                                          djb2(hex8)
+motto    超越永无止境      0fd75d0b464866a653680c82c4ab2edea6ab474f4ea060c191c88511139bc145    63d53f31
+year     1996           3d1e557b540ac045b3b327994a351f08a443f9216f9b2b8d3a0f42b58671ac83    7c78e81e
+road     津             e3acd7c95f1c961119f5cb724adfa9ecb609c6514f999d2fd6308f9422a895b3    000322ca
+token    ZW1923         510d6b54a5f2f8f29a2c6bf3419c7cc0c83d4e7b0ace84b34c975b3904e1b271    e01178e5
+
+说明：
+- 归一化规则：去首尾空格、全角转半角；year 额外只保留数字。
+- file:// 下 crypto.subtle 不可用，自动降级为 djb2，并在 console 输出"校验已降级。"
+- 其余谜题答案（笔记本内 20240714 / 3 / 0908 / 104 / 井名"沈砚秋"）本轮未要求哈希化。

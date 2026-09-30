@@ -1,0 +1,11 @@
+﻿User-agent: *
+Disallow: /jing
+Disallow: /laptop
+Disallow: /room/301
+Disallow: /admin
+Disallow: /private
+
+# -- 信息中心 --
+# 教职工令牌：ZW 开头，后四位是校史起点年份。
+# 笔记本里那台旧机器的口令：104
+# 那面镜子，别盯太久。
